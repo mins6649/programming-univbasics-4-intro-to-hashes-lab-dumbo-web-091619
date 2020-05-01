@@ -72,6 +72,33 @@ should return:
 }
 ```
 
+## A Message on Syntax Errors
+
+You may run into a particular error that includes: `syntax error, unexpected end-of-input`.
+This error is common when working with hashes. Most often, this error is caused because a hash
+is missing a curly brace. For instance, if you had the following in your code:
+
+```ruby
+{
+  :apples => 3,
+  :oranges => 1
+```
+
+Since there is no closing brace (`}`), Ruby does not know what to do here because it doesn't
+know where the hash ends. One way to help prevent this is through indentation - when manually
+writing out a hash, indent the contents using two spaces like the example above. This way, you'll
+be able to quickly scan the code and match opening and closing braces.
+
+Another recommendation when writing hashes from scratch - write both the opening and closing curly
+braces _first_, before adding any key/value pairs:
+
+```ruby
+{}
+```
+
+Another thing to look out for with hashes - make sure there is a comma after each key/value pair except
+for the last. Without this syntax, Ruby can't tell where one key/value pair ends and another starts!
+
 ## Conclusion
 
 Hashes are an essential data type that we will use frequently. Now that you've
