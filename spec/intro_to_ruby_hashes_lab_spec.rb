@@ -11,6 +11,7 @@ describe "working with hashes" do
     end
 
 
+
     describe "my_hash" do
       it "creates and returns a valid hash that contains key/value pairs of your choice" do
         expect(my_hash).to be_a(Hash)
